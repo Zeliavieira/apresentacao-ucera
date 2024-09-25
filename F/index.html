@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz sobre Úlcera de Pressão</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+section {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.quiz {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+#question-container {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+    width: 100%;
+    max-width: 300px;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 1.4rem;
+    color: green;
+}
+
+#confetti {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    display: none;
+}
+
+.confetto {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: linear-gradient(45deg, red, blue);
+    opacity: 0.8;
+    border-radius: 50%;
+    transform: translateY(0);
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100vh); }
+}
+
+
+    
+
+
+
+
+
+
+
+
+</style>
+<body>
+    <div class="container">
+
+        <!-- 10 imagens iniciais -->
+        <div id="start-images">
+            <section>
+                <img src="imagens/1.png" alt="Imagem 1">
+            </section>
+            <section>
+                <img src="imagens/2.png" alt="Imagem 2">
+            </section>
+            <section>
+                <img src="imagens/3.png" alt="Imagem 3">
+            </section>
+            <section>
+                <img src="imagens/4.png" alt="Imagem 4">
+            </section>
+            <section>
+                <img src="imagens/Úlceras de Pressão Prevenção e Tratamento.png" alt="Imagem 5">
+            </section>
+            <section>
+                <img src="imagens/6.png" alt="Imagem 6">
+            </section>
+            <section>
+                <img src="imagens/7.png" alt="Imagem 7">
+            </section>
+            <section>
+                <img src="imagens/8.png" alt="Imagem 8">
+            </section>
+            
+            <section>
+                <img src="imagens/Úlceras de Pressão Prevenção e Tratamento (1).png" alt="Imagem 9">
+            </section>
+               <img src="imagens/12.png" alt="Imagem 10">
+               <h1>Todos Entenderam?</h1>
+               <img src="imagens/DALL·E 2024-09-25 08.16.29 - A stylish image displaying the phrase 'Só quero ver se isso é verdade!' in bold, playful typography. The background is a bright and lively color, with.webp" width="100" alt="Imagem 10">
+<h2>Vamos para o Quiz</h2>
+            </section>
+
+<!-- Quiz -->
+
+    
+
+
+
+
+
+    <div class="quiz">
+
+        <section id="quiz-section">
+            <div id="question-container"></div>
+            <div id="answer-buttons" class="btn-container"></div>
+            <button id="next-btn" class="btn">Próxima</button>
+            <div id="message"></div>
+        </section>
+
+        <div id="confetti"></div>
+    </div>
+    <section>
+        <img src="imagens/10.png" alt="Imagem 9">
+    </section>
+    <img src="imagens/11.png" alt="Imagem 10">
+
+
+ 
+
+
+
+   
+
+
+
+
+
+            
+            <section>
+            </section> 
+        </div>
+
+        
+        <div id="chocolate-message"></div>
+
+        <!-- 3 imagens finais -->
+        <div id="end-images" style="display: none;">
+            <section>
+                <img src="imagem11.jpg" alt="Imagem 11">
+            </section>
+            <section>
+                <img src="imagem12.jpg" alt="Imagem 12">
+            </section>
+            <section>
+                <img src="imagem13.jpg" alt="Imagem 13">
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+<script>
+    class Quiz {
+    constructor(questions) {
+        this.questions = questions;
+        this.currentQuestionIndex = 0;
+        this.questionContainer = document.getElementById('question-container');
+        this.answerButtons = document.getElementById('answer-buttons');
+        this.nextButton = document.getElementById('next-btn');
+        this.message = document.getElementById('message');
+        this.confetti = document.getElementById('confetti');
+        
+        this.startQuiz();
+    }
+
+    startQuiz() {
+        this.currentQuestionIndex = 0;
+        this.nextButton.style.display = 'none';
+        this.showQuestion();
+    }
+
+    showQuestion() {
+        this.resetState();
+        const currentQuestion = this.questions[this.currentQuestionIndex];
+        this.questionContainer.innerText = currentQuestion.question;
+
+        currentQuestion.answers.forEach(answer => {
+            const button = document.createElement('button');
+            button.innerText = answer.text;
+            button.classList.add('btn');
+            button.addEventListener('click', () => this.selectAnswer(answer));
+            this.answerButtons.appendChild(button);
+        });
+        // Exibe os botões de resposta
+        const buttons = document.querySelectorAll('.btn');
+        buttons.forEach(button => button.style.display = 'inline-block');
+    }
+
+    resetState() {
+        while (this.answerButtons.firstChild) {
+            this.answerButtons.removeChild(this.answerButtons.firstChild);
+        }
+        this.message.innerHTML = '';
+        this.confetti.style.display = 'none';
+    }
+
+    selectAnswer(answer) {
+        if (answer.correct) {
+            this.message.innerHTML = 'Parabéns! Você ganhou um chocolate! 🍫';
+            this.showConfetti();
+        } else {
+            this.message.innerHTML = 'Estude mais,😞 quem acertar ganha!' ;
+        }
+        this.nextButton.style.display = 'block'; // Exibe o botão "Próxima"
+    }
+
+    showConfetti() {
+        this.confetti.style.display = 'block';
+        for (let i = 0; i < 100; i++) {
+            this.createConfetti();
+        }
+    }
+
+    createConfetti() {
+        const confetto = document.createElement('div');
+        confetto.classList.add('confetto');
+        confetto.style.left = Math.random() * 100 + 'vw';
+        confetto.style.animationDuration = Math.random() * 2 + 1 + 's';
+        this.confetti.appendChild(confetto);
+        setTimeout(() => {
+            confetto.remove();
+        }, 3000);
+    }
+
+    nextQuestion() {
+        this.currentQuestionIndex++;
+        if (this.currentQuestionIndex < this.questions.length) {
+            this.nextButton.style.display = 'none';
+            this.showQuestion();
+        } else {
+            this.message.innerHTML = 'Fim do quiz! Obrigado por participar!';
+            this.nextButton.style.display = 'none'; // Oculta o botão "Próxima" no final
+        }
+    }
+}
+
+// Perguntas do quiz
+const questions = [
+    {
+        question: "O que é uma úlcera de pressão?",
+        answers: [
+            { text: "Lesão na pele causada por pressão prolongada", correct: true },
+            { text: "Queimadura por calor", correct: false },
+            { text: "Corte profundo", correct: false }
+        ]
+    },
+    {
+        question: "Qual o principal fator de risco para úlcera de pressão?",
+        answers: [
+            { text: "Imobilidade prolongada", correct: true },
+            { text: "Uso de sapatos apertados", correct: false },
+            { text: "Falta de hidratação", correct: false }
+        ]
+    },
+    {
+        question: "Em qual área do corpo as úlceras de pressão são mais comuns?",
+        answers: [
+            { text: "Nas costas", correct: true },
+            { text: "Nas mãos", correct: false },
+            { text: "No rosto", correct: false }
+        ]
+    },
+    {
+        question: "Qual é um sinal de úlcera de pressão?",
+        answers: [
+            { text: "Mudança na cor da pele", correct: true },
+            { text: "Pele brilhante", correct: false },
+            { text: "Dor de cabeça", correct: false }
+        ]
+    },
+    {
+        question: "Qual a melhor forma de prevenir úlceras de pressão?",
+        answers: [
+            { text: "Mudança de posição regularmente", correct: true },
+            { text: "Usar roupas justas", correct: false },
+            { text: "Ficar parado o dia todo", correct: false }
+        ]
+    },
+    {
+        question: "Qual é a recomendação para tratar uma úlcera de pressão?",
+        answers: [
+            { text: "Limpar e cobrir a ferida", correct: true },
+            { text: "Deixar exposta ao ar", correct: false },
+            { text: "Ignorar até que cicatrize", correct: false }
+        ]
+    },
+    {
+        question: "Qual dessas condições pode aumentar o risco de úlceras de pressão?",
+        answers: [
+            { text: "Diabetes", correct: true },
+            { text: "Visão perfeita", correct: false },
+            { text: "Correr diariamente", correct: false }
+        ]
+    },
+    {
+        question: "Como a nutrição afeta as úlceras de pressão?",
+        answers: [
+            { text: "Uma boa nutrição ajuda na cicatrização", correct: true },
+            { text: "Não tem impacto", correct: false },
+            { text: "Aumenta o risco", correct: false }
+        ]
+    },
+    {
+        question: "Qual é o estágio inicial de uma úlcera de pressão?",
+        answers: [
+            { text: "Vermelhidão na pele", correct: true },
+            { text: "Bolhas grandes", correct: false },
+            { text: "Ferida profunda", correct: false }
+        ]
+    },
+    {
+        question: "Quem está mais suscetível a úlceras de pressão?",
+        answers: [
+            { text: "Pacientes acamados", correct: true },
+            { text: "Atletas", correct: false },
+            { text: "Crianças saudáveis", correct: false }
+        ]
+    },
+];
+
+const quiz = new Quiz(questions);
+
+document.getElementById('next-btn').addEventListener('click', () => quiz.nextQuestion());
+
+</script>
+    
+</body>
+</html>
+
